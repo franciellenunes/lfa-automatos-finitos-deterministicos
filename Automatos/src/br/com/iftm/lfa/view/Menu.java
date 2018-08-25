@@ -6,6 +6,9 @@
 package br.com.iftm.lfa.view;
 
 import br.com.iftm.lfa.controller.A;
+import br.com.iftm.lfa.controller.B;
+import br.com.iftm.lfa.controller.D;
+import br.com.iftm.lfa.controller.F;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -74,12 +77,22 @@ public class Menu extends javax.swing.JFrame {
 
         buttonGroup1.add(btnD);
         btnD.setText("D");
+        btnD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(btnE);
         btnE.setText("E");
 
         buttonGroup1.add(btnF);
         btnF.setText("F");
+        btnF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(btnG);
         btnG.setText("G");
@@ -175,20 +188,20 @@ public class Menu extends javax.swing.JFrame {
         this.recebeCadeia('B');
     }//GEN-LAST:event_btnBActionPerformed
 
+    private void btnDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDActionPerformed
+        this.recebeCadeia('D');
+    }//GEN-LAST:event_btnDActionPerformed
+
+    private void btnFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFActionPerformed
+        this.recebeCadeia('F');
+    }//GEN-LAST:event_btnFActionPerformed
+
     private void btnCActionPerformed(java.awt.event.ActionEvent evt) {
         this.recebeCadeia('C');
     }
 
-    private void btnDActionPerformed(java.awt.event.ActionEvent evt) {
-        this.recebeCadeia('D');
-    }
-
     private void btnEActionPerformed(java.awt.event.ActionEvent evt) {
         this.recebeCadeia('E');
-    }
-
-    private void btnFActionPerformed(java.awt.event.ActionEvent evt) {
-        this.recebeCadeia('F');
     }
 
     private void btnGActionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,19 +269,19 @@ public class Menu extends javax.swing.JFrame {
                         new A(listaCaracteres);
                         break;
                     case 'B':
-                        new A(listaCaracteres);
+                        new B(listaCaracteres);
                         break;
                     case 'C':
                         new A(listaCaracteres);
                         break;
                     case 'D':
-                        new A(listaCaracteres);
+                        new D(listaCaracteres);
                         break;
                     case 'E':
                         new A(listaCaracteres);
                         break;
                     case 'F':
-                        new A(listaCaracteres);
+                        new F(listaCaracteres);
                         break;
                     case 'G':
                         new A(listaCaracteres);
