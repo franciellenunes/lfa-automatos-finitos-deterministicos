@@ -6,6 +6,7 @@
 package br.com.iftm.lfa.view;
 
 import br.com.iftm.lfa.controller.A;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,6 +19,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        setLocationRelativeTo(null); 
     }
 
     /**
@@ -160,7 +162,8 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAActionPerformed
-        new A("Cadeia para teste");
+       this.recebeSentenca();
+        
     }//GEN-LAST:event_btnAActionPerformed
 
     /**
@@ -196,6 +199,18 @@ public class Menu extends javax.swing.JFrame {
                 new Menu().setVisible(true);
             }
         });
+    }
+    private void recebeSentenca(){
+         String cadeia = null;
+        while (cadeia == null || cadeia.isEmpty()) {
+            cadeia = JOptionPane.showInputDialog("Entre com a sentença que deseja simular");
+            if(cadeia == null) {
+                break;
+            }
+            if(!cadeia.isEmpty()){
+                new A(cadeia);
+            }
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
