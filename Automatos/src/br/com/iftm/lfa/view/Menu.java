@@ -6,6 +6,7 @@
 package br.com.iftm.lfa.view;
 
 import br.com.iftm.lfa.controller.A;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -167,46 +168,44 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAActionPerformed
-        this.recebeSentenca('A');
+        this.recebeCadeia('A');
     }//GEN-LAST:event_btnAActionPerformed
 
     private void btnBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBActionPerformed
-        this.recebeSentenca('B');
+        this.recebeCadeia('B');
     }//GEN-LAST:event_btnBActionPerformed
 
     private void btnCActionPerformed(java.awt.event.ActionEvent evt) {
-        this.recebeSentenca('C');
+        this.recebeCadeia('C');
     }
 
     private void btnDActionPerformed(java.awt.event.ActionEvent evt) {
-        this.recebeSentenca('D');
+        this.recebeCadeia('D');
     }
 
     private void btnEActionPerformed(java.awt.event.ActionEvent evt) {
-        this.recebeSentenca('E');
+        this.recebeCadeia('E');
     }
-    
-    private void btnFActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        this.recebeSentenca('F');
-    }                                    
 
-    private void btnGActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        this.recebeSentenca('G');
-    }                                    
+    private void btnFActionPerformed(java.awt.event.ActionEvent evt) {
+        this.recebeCadeia('F');
+    }
+
+    private void btnGActionPerformed(java.awt.event.ActionEvent evt) {
+        this.recebeCadeia('G');
+    }
 
     private void btnHActionPerformed(java.awt.event.ActionEvent evt) {
-        this.recebeSentenca('H');
+        this.recebeCadeia('H');
     }
 
     private void btnIActionPerformed(java.awt.event.ActionEvent evt) {
-        this.recebeSentenca('I');
+        this.recebeCadeia('I');
     }
 
     private void btnJActionPerformed(java.awt.event.ActionEvent evt) {
-        this.recebeSentenca('J');
+        this.recebeCadeia('J');
     }
-    
-    
 
     /**
      * @param args the command line arguments
@@ -242,8 +241,8 @@ public class Menu extends javax.swing.JFrame {
             }
         });
     }
-    
-    private void recebeSentenca(char classe) {
+
+    private void recebeCadeia(char classe) {
         String cadeia = null;
         while (cadeia == null || cadeia.isEmpty()) {
             cadeia = JOptionPane.showInputDialog("Entre com a sentença que deseja simular");
@@ -251,36 +250,37 @@ public class Menu extends javax.swing.JFrame {
                 break;
             }
             if (!cadeia.isEmpty()) {
+                char[] listaCaracteres = cadeia.toCharArray();
                 switch (classe) {
                     case 'A':
-                        new A(cadeia);
+                        new A(listaCaracteres);
                         break;
                     case 'B':
-                        new A(cadeia);
+                        new A(listaCaracteres);
                         break;
                     case 'C':
-                        new A(cadeia);
+                        new A(listaCaracteres);
                         break;
                     case 'D':
-                        new A(cadeia);
+                        new A(listaCaracteres);
                         break;
                     case 'E':
-                        new A(cadeia);
+                        new A(listaCaracteres);
                         break;
                     case 'F':
-                        new A(cadeia);
+                        new A(listaCaracteres);
                         break;
                     case 'G':
-                        new A(cadeia);
+                        new A(listaCaracteres);
                         break;
                     case 'H':
-                        new A(cadeia);
+                        new A(listaCaracteres);
                         break;
                     case 'I':
-                        new A(cadeia);
+                        new A(listaCaracteres);
                         break;
                     case 'J':
-                        new A(cadeia);
+                        new A(listaCaracteres);
                         break;
                 }
             }
