@@ -19,7 +19,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
-        setLocationRelativeTo(null); 
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -62,6 +62,11 @@ public class Menu extends javax.swing.JFrame {
 
         buttonGroup1.add(btnB);
         btnB.setText("B");
+        btnB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(btnC);
         btnC.setText("C");
@@ -162,9 +167,46 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAActionPerformed
-       this.recebeSentenca();
-        
+        this.recebeSentenca('A');
     }//GEN-LAST:event_btnAActionPerformed
+
+    private void btnBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBActionPerformed
+        this.recebeSentenca('B');
+    }//GEN-LAST:event_btnBActionPerformed
+
+    private void btnCActionPerformed(java.awt.event.ActionEvent evt) {
+        this.recebeSentenca('C');
+    }
+
+    private void btnDActionPerformed(java.awt.event.ActionEvent evt) {
+        this.recebeSentenca('D');
+    }
+
+    private void btnEActionPerformed(java.awt.event.ActionEvent evt) {
+        this.recebeSentenca('E');
+    }
+    
+    private void btnFActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        this.recebeSentenca('F');
+    }                                    
+
+    private void btnGActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        this.recebeSentenca('G');
+    }                                    
+
+    private void btnHActionPerformed(java.awt.event.ActionEvent evt) {
+        this.recebeSentenca('H');
+    }
+
+    private void btnIActionPerformed(java.awt.event.ActionEvent evt) {
+        this.recebeSentenca('I');
+    }
+
+    private void btnJActionPerformed(java.awt.event.ActionEvent evt) {
+        this.recebeSentenca('J');
+    }
+    
+    
 
     /**
      * @param args the command line arguments
@@ -200,15 +242,47 @@ public class Menu extends javax.swing.JFrame {
             }
         });
     }
-    private void recebeSentenca(){
-         String cadeia = null;
+    
+    private void recebeSentenca(char classe) {
+        String cadeia = null;
         while (cadeia == null || cadeia.isEmpty()) {
             cadeia = JOptionPane.showInputDialog("Entre com a sentença que deseja simular");
-            if(cadeia == null) {
+            if (cadeia == null) {
                 break;
             }
-            if(!cadeia.isEmpty()){
-                new A(cadeia);
+            if (!cadeia.isEmpty()) {
+                switch (classe) {
+                    case 'A':
+                        new A(cadeia);
+                        break;
+                    case 'B':
+                        new A(cadeia);
+                        break;
+                    case 'C':
+                        new A(cadeia);
+                        break;
+                    case 'D':
+                        new A(cadeia);
+                        break;
+                    case 'E':
+                        new A(cadeia);
+                        break;
+                    case 'F':
+                        new A(cadeia);
+                        break;
+                    case 'G':
+                        new A(cadeia);
+                        break;
+                    case 'H':
+                        new A(cadeia);
+                        break;
+                    case 'I':
+                        new A(cadeia);
+                        break;
+                    case 'J':
+                        new A(cadeia);
+                        break;
+                }
             }
         }
     }

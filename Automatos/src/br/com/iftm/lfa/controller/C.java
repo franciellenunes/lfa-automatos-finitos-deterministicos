@@ -5,15 +5,10 @@
  */
 package br.com.iftm.lfa.controller;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author luis
  */
-public class A {
-    public A(String cadeia){
-         JOptionPane.showMessageDialog(null, cadeia);
-    }
+public class C {
     
 }

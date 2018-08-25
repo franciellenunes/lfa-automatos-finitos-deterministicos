@@ -11,9 +11,8 @@ import javax.swing.JOptionPane;
  *
  * @author luis
  */
-public class A {
-    public A(String cadeia){
+public class B {
+       public B(String cadeia){
          JOptionPane.showMessageDialog(null, cadeia);
     }
-    
 }
