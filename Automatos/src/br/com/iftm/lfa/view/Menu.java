@@ -18,8 +18,10 @@ import br.com.iftm.lfa.controller.J;
 import javax.swing.JOptionPane;
 
 /**
+ * Jframe responsável por apresentar as opções de autômatos para simulação
  *
- * @author luis
+ * @author Francielle da Silva Nunes
+ * @author Luís Fernando de Ávila
  */
 public class Menu extends javax.swing.JFrame {
 
@@ -290,6 +292,11 @@ public class Menu extends javax.swing.JFrame {
         });
     }
 
+     /**
+     * Método que transforma uma String em uma cadeia de caracteres e a envia
+     * para classe escolhida. 
+     * @param classe recebe o nome da classe que será instanciada 
+     */
     private void recebeCadeia(char classe) {
         String cadeia = null;
         while (cadeia == null || cadeia.isEmpty()) {

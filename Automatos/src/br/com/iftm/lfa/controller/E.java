@@ -8,8 +8,10 @@ package br.com.iftm.lfa.controller;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author luis
+ * Classe criada para resolução do exercício correspondente a letra E
+ * A linguagem não possui ocorrência de cadeia baba.
+ * 
+ * @author Luís Fernando de Ávila
  */
 public class E {
 

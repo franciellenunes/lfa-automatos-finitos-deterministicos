@@ -6,8 +6,11 @@
 package br.com.iftm.lfa.controller;
 
 /**
- *
- * @author luis
+ * Classe criada para resolução do exercício correspondente a letra G
+ * A linguagem começa com a e possui occorência par de a's ou começa com b e 
+ * possui ocorrência impar de b's.
+ * 
+ * @author Luís Fernando de Ávila
  */
 public class G {
 

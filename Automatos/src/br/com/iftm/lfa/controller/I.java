@@ -6,8 +6,11 @@
 package br.com.iftm.lfa.controller;
 
 /**
- *
- * @author luis
+ * Classe criada para resolução do exercício correspondente a letra G
+ * A linguagem inicia-se com uma letra, possuindo a seguir qualquer combinação
+ * de letras e dígitos.
+ * 
+ * @author Luís Fernando de Ávila
  */
 public class I {
 

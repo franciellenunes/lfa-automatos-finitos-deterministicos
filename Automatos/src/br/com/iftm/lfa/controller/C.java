@@ -8,8 +8,10 @@ package br.com.iftm.lfa.controller;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author luis
+ * Classe criada para resolução do exercício correspondente a letra C
+ * A linguagem possui baba como prefixo e abab como sufixo.
+ * 
+ * @author Luís Fernando de Ávila
  */
 public class C {
 

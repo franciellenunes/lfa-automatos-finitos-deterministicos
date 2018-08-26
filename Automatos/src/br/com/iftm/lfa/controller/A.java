@@ -5,12 +5,13 @@
  */
 package br.com.iftm.lfa.controller;
 
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author luis
+ * Classe criada para resolução do exercício correspondente a letra A
+ * A linguagem começa com a e termina com b.
+ * 
+ * @author Luís Fernando de Ávila
  */
 public class A {
 
