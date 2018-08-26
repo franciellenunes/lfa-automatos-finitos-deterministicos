@@ -7,9 +7,14 @@ package br.com.iftm.lfa.view;
 
 import br.com.iftm.lfa.controller.A;
 import br.com.iftm.lfa.controller.B;
+import br.com.iftm.lfa.controller.C;
 import br.com.iftm.lfa.controller.D;
+import br.com.iftm.lfa.controller.E;
 import br.com.iftm.lfa.controller.F;
-import java.util.ArrayList;
+import br.com.iftm.lfa.controller.G;
+import br.com.iftm.lfa.controller.H;
+import br.com.iftm.lfa.controller.I;
+import br.com.iftm.lfa.controller.J;
 import javax.swing.JOptionPane;
 
 /**
@@ -74,6 +79,11 @@ public class Menu extends javax.swing.JFrame {
 
         buttonGroup1.add(btnC);
         btnC.setText("C");
+        btnC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(btnD);
         btnD.setText("D");
@@ -85,6 +95,11 @@ public class Menu extends javax.swing.JFrame {
 
         buttonGroup1.add(btnE);
         btnE.setText("E");
+        btnE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(btnF);
         btnF.setText("F");
@@ -96,15 +111,35 @@ public class Menu extends javax.swing.JFrame {
 
         buttonGroup1.add(btnG);
         btnG.setText("G");
+        btnG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(btnH);
         btnH.setText("H");
+        btnH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(btnI);
         btnI.setText("I");
+        btnI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(btnJ);
         btnJ.setText("J");
+        btnJ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -188,37 +223,37 @@ public class Menu extends javax.swing.JFrame {
         this.recebeCadeia('B');
     }//GEN-LAST:event_btnBActionPerformed
 
+    private void btnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCActionPerformed
+        this.recebeCadeia('C');
+    }//GEN-LAST:event_btnCActionPerformed
+
     private void btnDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDActionPerformed
         this.recebeCadeia('D');
     }//GEN-LAST:event_btnDActionPerformed
+
+    private void btnEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEActionPerformed
+        this.recebeCadeia('E');
+    }//GEN-LAST:event_btnEActionPerformed
 
     private void btnFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFActionPerformed
         this.recebeCadeia('F');
     }//GEN-LAST:event_btnFActionPerformed
 
-    private void btnCActionPerformed(java.awt.event.ActionEvent evt) {
-        this.recebeCadeia('C');
-    }
-
-    private void btnEActionPerformed(java.awt.event.ActionEvent evt) {
-        this.recebeCadeia('E');
-    }
-
-    private void btnGActionPerformed(java.awt.event.ActionEvent evt) {
+    private void btnGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGActionPerformed
         this.recebeCadeia('G');
-    }
+    }//GEN-LAST:event_btnGActionPerformed
 
-    private void btnHActionPerformed(java.awt.event.ActionEvent evt) {
+    private void btnHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHActionPerformed
         this.recebeCadeia('H');
-    }
+    }//GEN-LAST:event_btnHActionPerformed
 
-    private void btnIActionPerformed(java.awt.event.ActionEvent evt) {
+    private void btnIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIActionPerformed
         this.recebeCadeia('I');
-    }
+    }//GEN-LAST:event_btnIActionPerformed
 
-    private void btnJActionPerformed(java.awt.event.ActionEvent evt) {
+    private void btnJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJActionPerformed
         this.recebeCadeia('J');
-    }
+    }//GEN-LAST:event_btnJActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,28 +307,28 @@ public class Menu extends javax.swing.JFrame {
                         new B(listaCaracteres);
                         break;
                     case 'C':
-                        new A(listaCaracteres);
+                        new C(listaCaracteres);
                         break;
                     case 'D':
                         new D(listaCaracteres);
                         break;
                     case 'E':
-                        new A(listaCaracteres);
+                        new E(listaCaracteres);
                         break;
                     case 'F':
                         new F(listaCaracteres);
                         break;
                     case 'G':
-                        new A(listaCaracteres);
+                        new G(listaCaracteres);
                         break;
                     case 'H':
-                        new A(listaCaracteres);
+                        new H(listaCaracteres);
                         break;
                     case 'I':
-                        new A(listaCaracteres);
+                        new I(listaCaracteres);
                         break;
                     case 'J':
-                        new A(listaCaracteres);
+                        new J(listaCaracteres);
                         break;
                 }
             }

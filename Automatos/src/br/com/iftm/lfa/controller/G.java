@@ -10,5 +10,15 @@ package br.com.iftm.lfa.controller;
  * @author luis
  */
 public class G {
-    
+
+    public G(char[] cadeia) {
+        Boolean erro = false;
+        int Q = 1;
+        for (char c : cadeia) {
+            switch (Q) {
+            }
+        }
+
+    }
+
 }
