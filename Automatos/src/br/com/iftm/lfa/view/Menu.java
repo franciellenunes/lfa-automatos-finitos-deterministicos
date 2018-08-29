@@ -64,7 +64,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel2.setText("Selecione abaixo o autômato que deseja simular");
 
         buttonGroup1.add(btnA);
-        btnA.setText("A");
+        btnA.setText("A - ω começa com a e termina com b");
         btnA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAActionPerformed(evt);
@@ -72,7 +72,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(btnB);
-        btnB.setText("B");
+        btnB.setText("B - ω possui aaa como subcadeia");
         btnB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBActionPerformed(evt);
@@ -80,7 +80,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(btnC);
-        btnC.setText("C");
+        btnC.setText("C - ω possui baba como prefixo e abab como sufixo");
         btnC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCActionPerformed(evt);
@@ -88,7 +88,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(btnD);
-        btnD.setText("D");
+        btnD.setText("D - ω possui no máximo uma ocorrência de cadeia baba");
         btnD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDActionPerformed(evt);
@@ -96,7 +96,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(btnE);
-        btnE.setText("E");
+        btnE.setText("E - ω não possui ocorrência da cadeia baba");
         btnE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEActionPerformed(evt);
@@ -104,7 +104,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(btnF);
-        btnF.setText("F");
+        btnF.setText("F - ω possui ocorrência de par de a's seguida por ocorrência impar de b's");
         btnF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFActionPerformed(evt);
@@ -112,7 +112,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(btnG);
-        btnG.setText("G");
+        btnG.setText("G - ω começa com a e possui ocorrência par de a's ou começa com b e possui ocorrencia impar de b's");
         btnG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGActionPerformed(evt);
@@ -120,7 +120,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(btnH);
-        btnH.setText("H");
+        btnH.setText("H - ω inicia-se com 0 e a soma de todos os seus dígitos é par, ou inicia-se com 1 e a soma de todos os seus digitos é impar");
         btnH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHActionPerformed(evt);
@@ -128,7 +128,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(btnI);
-        btnI.setText("I");
+        btnI.setText("I - ω inicia-se com uma letra, possuindo a seguir qualquer combinação ed letras e dígitos");
         btnI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIActionPerformed(evt);
@@ -136,7 +136,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(btnJ);
-        btnJ.setText("J");
+        btnJ.setText(" J - ω é um número inteiro, um número decimal ou um número representado em notação científica");
         btnJ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnJActionPerformed(evt);
@@ -147,71 +147,76 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(75, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
+                    .addComponent(btnJ)
+                    .addComponent(btnF)
+                    .addComponent(btnG)
+                    .addComponent(btnH)
+                    .addComponent(btnI)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnB)
+                        .addComponent(btnC)
+                        .addComponent(btnE)
+                        .addComponent(btnA)
+                        .addComponent(btnD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(25, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(284, 284, 284))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(69, 69, 69))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnE)
-                            .addComponent(btnD)
-                            .addComponent(btnC)
-                            .addComponent(btnB)
-                            .addComponent(btnA))
-                        .addGap(77, 77, 77)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnJ)
-                            .addComponent(btnI)
-                            .addComponent(btnH)
-                            .addComponent(btnG)
-                            .addComponent(btnF))
-                        .addGap(91, 91, 91)))
-                .addGap(93, 93, 93))
+                        .addGap(365, 365, 365))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(22, 22, 22)
                 .addComponent(jLabel1)
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(33, 33, 33)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnA)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnB)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnC)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnD)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnF)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnG)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnH)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnI)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnJ)))
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addComponent(btnA)
+                .addGap(18, 18, 18)
+                .addComponent(btnB)
+                .addGap(18, 18, 18)
+                .addComponent(btnC)
+                .addGap(18, 18, 18)
+                .addComponent(btnD)
+                .addGap(18, 18, 18)
+                .addComponent(btnE)
+                .addGap(18, 18, 18)
+                .addComponent(btnF)
+                .addGap(18, 18, 18)
+                .addComponent(btnG)
+                .addGap(18, 18, 18)
+                .addComponent(btnH)
+                .addGap(18, 18, 18)
+                .addComponent(btnI)
+                .addGap(18, 18, 18)
+                .addComponent(btnJ)
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();

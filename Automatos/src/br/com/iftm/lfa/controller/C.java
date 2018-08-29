@@ -8,9 +8,9 @@ package br.com.iftm.lfa.controller;
 import javax.swing.JOptionPane;
 
 /**
- * Classe criada para resolução do exercício correspondente a letra C
- * A linguagem possui baba como prefixo e abab como sufixo.
- * 
+ * Classe criada para resolução do exercício correspondente a letra C A
+ * linguagem possui baba como prefixo e abab como sufixo.
+ *
  * @author Luís Fernando de Ávila
  */
 public class C {
@@ -50,9 +50,9 @@ public class C {
                     break;
                 case 5:
                     if (c == 'a') {
-                        Q = 5;
-                    } else if (c == 'b') {
                         Q = 6;
+                    } else if (c == 'b') {
+                        Q = 10;
                     } else {
                         erro = true;
                     }
@@ -61,19 +61,51 @@ public class C {
                     if (c == 'a') {
                         Q = 7;
                     } else if (c == 'b') {
-                        Q = 4;
+                        Q = 8;
+                    } else {
+                        erro = true;
                     }
                     break;
                 case 7:
-                    if (c != 'b') {
-                        erro = true;
-                    } else {
+                    if (c == 'a') {
+                        Q = 7;
+                    } else if (c == 'b') {
                         Q = 8;
+                    } else {
+                        erro = true;
                     }
+                    break;
+                case 8:
+                    if (c == 'a') {
+                        Q = 5;
+                    } else if (c == 'b') {
+                        Q = 11;
+                    } else {
+                        erro = true;
+                    }
+                    break;
+                case 10:
+                    if (c == 'a') {
+                        Q = 5;
+                    } else if (c == 'b') {
+                        Q = 7;
+                    } else {
+                        erro = true;
+                    }
+                    break;
+                case 11:
+                    if (c == 'a') {
+                        Q = 7;
+                    } else if (c == 'b') {
+                        Q = 11;
+                    } else {
+                        erro = true;
+                    }
+                    break;
             }
 
         }
-        if (erro || (Q != 8 && Q != 6)) {
+        if (erro || Q != 10) {
             JOptionPane.showMessageDialog(null, "Sentença não reconhecida");
         } else {
             JOptionPane.showMessageDialog(null, "Sentença reconhecida");
