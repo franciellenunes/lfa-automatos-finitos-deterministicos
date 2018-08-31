@@ -20,46 +20,52 @@ import javax.swing.JOptionPane;
 public class I {
 
     public I(char[] cadeia) {
+
         List<Character> alfabeto = new ArrayList<Character>();
         alfabeto.addAll(Arrays.asList('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
                 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'w',
                 'y', 'z'));
+
         List<Character> digitos = new ArrayList<Character>();
         for (int i = 0; i <= 9; i++) {
-             digitos.add((char)(i+'0'));
+            digitos.add((char) (i + '0'));
         }
+
         Boolean erro = false;
         int Q = 1;
-        for (char c : cadeia) {
-            switch (Q) {
-                case 1:
-                    if (digitos.contains(c)) {
+        if (cadeia.equals("")) {
+            erro = true;
+        } else {
+            for (char c : cadeia) {
+                switch (Q) {
+                    case 1:
+                        if (digitos.contains(c)) {
+                            erro = true;
+                        } else if (alfabeto.contains(c)) {
+                            Q = 2;
+                        } else {
+                            erro = true;
+                        }
+                        break;
+                    case 2:
+                        if (alfabeto.contains(c) || digitos.contains(c)) {
+                            Q = 2;
+                        } else {
+                            erro = true;
+                        }
+                        break;
+                    default:
                         erro = true;
-                    } else if (alfabeto.contains(c)) {
-                        Q = 2;
-                    } else {
-                        erro = true;
-                    }
-                    break;
-                case 2:
-                    if (alfabeto.contains(c) || digitos.contains(c)) {
-                        Q = 2;
-                    } else {
-                        erro = true;
-                    }
-                    break;
-                default:
-                    erro = true;
-                    break;
-
+                        break;
+                }
             }
         }
-         if (erro || Q != 2 ) {
+        
+        if (erro || Q != 2) {
             JOptionPane.showMessageDialog(null, "Sentença não reconhecida");
         } else {
             JOptionPane.showMessageDialog(null, "Sentença reconhecida");
         }
-
+        
     }
-
 }

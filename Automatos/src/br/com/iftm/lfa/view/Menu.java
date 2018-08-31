@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.iftm.lfa.view;
 
 import br.com.iftm.lfa.controller.A;
@@ -302,12 +297,11 @@ public class Menu extends javax.swing.JFrame {
      */
     private void recebeCadeia(char classe) {
         String cadeia = null;
-        while (cadeia == null || cadeia.isEmpty()) {
+        while (cadeia == null) {
             cadeia = JOptionPane.showInputDialog("Entre com a sentença que deseja simular");
             if (cadeia == null) {
                 break;
-            }
-            if (!cadeia.isEmpty()) {
+            } else {
                 char[] listaCaracteres = cadeia.toCharArray();
                 switch (classe) {
                     case 'A':

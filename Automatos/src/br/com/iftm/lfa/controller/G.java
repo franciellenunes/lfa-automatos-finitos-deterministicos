@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * MIT License - Copyright (c) 2018 Francielle da Silva Nunes, Luís Fernando Ávila
+ * Criada em 25 ago 2018
  */
 package br.com.iftm.lfa.controller;
 
@@ -38,95 +37,99 @@ public class G {
                 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'w',
                 'y', 'z'));
         int Q = 1;
-        for (char c : cadeia) {
-            switch (Q) {
-                case 1:
-                    if (c == 'a') {
-                        Q = 2;
-                    } else if (c == 'b') {
-                        Q = 6;
-                    } else if (alfabetosemAB.contains(c)) {
-                        Q = 5;
-                    } else {
+        if (cadeia.equals("")) {
+            erro = true;
+        } else {
+            for (char c : cadeia) {
+                switch (Q) {
+                    case 1:
+                        if (c == 'a') {
+                            Q = 2;
+                        } else if (c == 'b') {
+                            Q = 6;
+                        } else if (alfabetosemAB.contains(c)) {
+                            Q = 5;
+                        } else {
+                            erro = true;
+                        }
+                        break;
+                    case 2:
+                        if (alfabetosemA.contains(c)) {
+                            Q = 5;
+                        } else if (c == 'a') {
+                            Q = 3;
+                        } else {
+                            erro = true;
+                        }
+                        break;
+                    case 3:
+                        if (c == 'a') {
+                            Q = 2;
+                        } else if (alfabetosemA.contains(c)) {
+                            Q = 4;
+                        } else {
+                            erro = true;
+                        }
+                        break;
+                    case 4:
+                        if (c == 'a') {
+                            Q = 2;
+                        } else if (alfabetosemA.contains(c)) {
+                            Q = 4;
+                        } else {
+                            erro = true;
+                        }
+                        break;
+                    case 5:
                         erro = true;
-                    }
-                    break;
-                case 2:
-                    if (alfabetosemA.contains(c)) {
-                        Q = 5;
-                    } else if (c == 'a') {
-                        Q = 3;
-                    } else {
-                        erro = true;
-                    }
-                    break;
-                case 3:
-                    if (c == 'a') {
-                        Q = 2;
-                    } else if (alfabetosemA.contains(c)) {
-                        Q = 4;
-                    } else {
-                        erro = true;
-                    }
-                    break;
-                case 4:
-                    if (c == 'a') {
-                        Q = 2;
-                    } else if (alfabetosemA.contains(c)) {
-                        Q = 4;
-                    } else {
-                        erro = true;
-                    }
-                    break;
-                case 5:
-                    erro = true;
-                    break;
-                case 6:
-                    if (alfabetosemB.contains(c)) {
-                        Q = 7;
-                    } else if (c == 'b') {
-                        Q = 8;
-                    } else {
-                        erro = true;
-                    }
-                    break;
-                case 7:
-                    if (alfabetosemB.contains(c)) {
-                        Q = 7;
-                    } else if (c == 'b') {
-                        Q = 6;
-                    } else {
-                        erro = true;
-                    }
-                    break;
-                case 8:
-                    if (alfabetosemB.contains(c)) {
-                        Q = 5;
-                    } else if (c == 'b') {
-                        Q = 9;
-                    } else {
-                        erro = true;
-                    }
-                    break;
-                case 9:
-                    if (alfabetosemB.contains(c)) {
-                        Q = 7;
-                    } else if (c == 'b') {
-                        Q = 8;
-                    } else {
-                        erro = true;
-                    }
-                    break;
-                default:
-                    break;
+                        break;
+                    case 6:
+                        if (alfabetosemB.contains(c)) {
+                            Q = 7;
+                        } else if (c == 'b') {
+                            Q = 8;
+                        } else {
+                            erro = true;
+                        }
+                        break;
+                    case 7:
+                        if (alfabetosemB.contains(c)) {
+                            Q = 7;
+                        } else if (c == 'b') {
+                            Q = 6;
+                        } else {
+                            erro = true;
+                        }
+                        break;
+                    case 8:
+                        if (alfabetosemB.contains(c)) {
+                            Q = 5;
+                        } else if (c == 'b') {
+                            Q = 9;
+                        } else {
+                            erro = true;
+                        }
+                        break;
+                    case 9:
+                        if (alfabetosemB.contains(c)) {
+                            Q = 7;
+                        } else if (c == 'b') {
+                            Q = 8;
+                        } else {
+                            erro = true;
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
         }
-        if (erro || (Q != 3 && Q != 4 && Q != 6 && Q != 7 && Q != 9 )) {
+        
+        if (erro || (Q != 3 && Q != 4 && Q != 6 && Q != 7 && Q != 9)) {
             JOptionPane.showMessageDialog(null, "Sentença não reconhecida");
         } else {
             JOptionPane.showMessageDialog(null, "Sentença reconhecida");
         }
-
+        
     }
-
 }
