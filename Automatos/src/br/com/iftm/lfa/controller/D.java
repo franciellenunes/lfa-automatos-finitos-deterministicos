@@ -93,7 +93,7 @@ public class D {
                     break;
                 case 9:
                     if (c == 'a') {
-                        Q = 5;
+                        Q = 7;
                     } else if (c == 'b') {
                         Q = 9;
                     } else {
